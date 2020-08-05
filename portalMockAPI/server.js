@@ -1,7 +1,7 @@
 var constant = require("./CONSTANTS");
 var express = require("express");
 var forwarder = require("./forwarder");
-var rootCas = require("ssl-root-cas/latest").create();
+var rootCas = require("ssl-root-cas").create();
 require("https").globalAgent.options.ca = rootCas;
 forwarder = new forwarder();
 
